@@ -1,3 +1,5 @@
+# AOJ 1160 - 島はいくつある？　
+
 import sys
 sys.setrecursionlimit(10 ** 9)
 
