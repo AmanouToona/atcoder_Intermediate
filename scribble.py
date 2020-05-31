@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
+import itertools
 
-a = [[1, 1,1], [2, 2, 3]]
+for j in itertools.product([-1, 0, 1], [-1, 0, 1]):
+    print(j)
 
-print(3 in )

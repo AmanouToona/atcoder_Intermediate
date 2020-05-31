@@ -18,6 +18,8 @@ def dfs(u, fp, counter):
     # return: max depth, x(max depth), y(max_depth)
 
     x, y = u[0], u[1]
+    FP[x + y * M] = False
+
     fp[x + y * M] = False
     counter += 1
     x_ans, y_ans = x, y
@@ -35,19 +37,23 @@ def dfs(u, fp, counter):
             if count_temp > count_ans:
                 x_ans, y_ans, count_ans = x_temp, y_temp, count_temp
 
+    fp[x + y * M] = True
     return x_ans, y_ans, count_ans
 
 
 fp = FP.copy()
+fp2 = FP.copy()
 ans = 0
-while True in fp:
-    u = fp.index(True)
+while True in FP:
+    u = FP.index(True)
     y = int(u // M)
     x = int(u - y * M)
 
-    x_temp, y_temp, count_temp = dfs((x, y), fp, 0)
+    x_temp, y_temp, count_temp = dfs((x, y), fp, 0)  # 一度　 dfs で最も氷を割れる経路を探索する
+    # print(x_temp, y_temp, count_temp)
 
-    _, _, ans_temp = dfs((x_temp, y_temp), FP.copy(), 0)
+    _, _, ans_temp = dfs((x_temp, y_temp), fp2, 0)  # 最も氷を割れた経路の終着点から、最も氷を割れる経路を探索する
+    # やってることのイメージは木の直径を求めることに近い。　最も遠い点と最も遠い点の間の距離を求める
     ans = max(ans, ans_temp)
 
     # print(f'x_ans: {x_ans}, y_ans: {y_ans}, count_ans: {count_ans}')

@@ -51,6 +51,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
+  <component name="ProjectId" id="1bQCoodbcaT8QyxsLqQx3auWFpA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -97,6 +101,7 @@
       </pane>
     </panes>
   </component>
+>>>>>>> 6e243cc0a6173613f7f62b3cbfa617a7ef5588fd
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -256,6 +261,18 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+=======
   <component name="ToolWindowManager">
     <frame x="780" y="221" width="974" height="1047" extended-state="0" />
     <layout>
@@ -401,5 +418,6 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 6e243cc0a6173613f7f62b3cbfa617a7ef5588fd
   </component>
 </project>
