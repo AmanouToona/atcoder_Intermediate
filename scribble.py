@@ -2,11 +2,6 @@ import pandas as pd
 import numpy as np
 import itertools
 
-A = str(input())
-b = '.'
+A = list(np.arange(10))
 
-for a in A:
-    print(a)
-    if a is b:
-        print('yes')
-
+print(A[1: -1])
