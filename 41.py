@@ -24,7 +24,7 @@ for n in range(N):
     dp[0][n] = 0
 
 
-for d in range(D):
+for d in range(D - 1):
     for n in range(N):
         if dp[d][n] == -1:
             continue
@@ -35,8 +35,8 @@ for d in range(D):
 
             dp[d + 1][nn] = max(dp[d + 1][nn], dp[d][n] + abs(C[n] - C[nn]))
 
-for i in range(len(dp)):
-    print(dp[i])
+# for i in range(len(dp)):
+#     print(dp[i])
 
 print(max(dp[-1]))
 
