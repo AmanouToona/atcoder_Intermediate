@@ -2,6 +2,13 @@ import pandas as pd
 import numpy as np
 import itertools
 
-A = list(np.arange(10))
+N = 10
+for l in range(2, N):
+    for i in range(1, N - l + 1):
+        j = i + l - 1
+        print(f'l: {l}, i: {i}, j:{j}')
 
-print(A[1: -1])
+for l in range(0, N):
+    for i in range(0, l + 1):
+        j = i + l
+
