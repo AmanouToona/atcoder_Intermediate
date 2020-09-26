@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": "D:\\User\\programing\\Anaconda3\\python.exe",
+    "python.testing.pytestArgs": [
+        "venv"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "workbench.settings.useSplitJSON": true //setting.json を開いたとき2画面でデフォルトの設定を表示する
+}
