@@ -1,6 +1,3 @@
-a = float('inf')
+for i in range(1, 10, 2):
+    print(i)
 
-if a is float('inf'):
-    print('yes')
-else:
-    print('no')

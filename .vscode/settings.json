@@ -6,5 +6,11 @@
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": true,
-    "workbench.settings.useSplitJSON": true //setting.json を開いたとき2画面でデフォルトの設定を表示する
+    "workbench.settings.useSplitJSON": true,
+
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground" :　"#008080",
+        "editor.selectionHighlightBackground":　"#806200"
+    
+    }
 }
