@@ -18,25 +18,25 @@ for h in range(H):
         cusum[h + 1][w + 1] += cusum[h + 1][w] + cusum[h][w + 1] - cusum[h][w]
 
 ans = 0
-for h in range(1, H + 1):
-    for w in range(1, W + 1):
+for h in range(1, H + 1):  # 購入する土地の縦幅
+    for w in range(1, W + 1):  # 購入する土地の横幅
+        # print(f'h: {h} w: {w}')
         if h * w * K > V:  # 建設費用のみで所持額を超える
             break
         if h * w <= ans:  # すでに購入可能だとわかっている土地以下の大きさならば確かめる必要がない
-            break
+            continue
 
-        for h_ul in range(1, H + 1 - (h - 1), h):  # h upper left
-            for w_ul in range(1, W + 1 - (w - 1), w):  # w upper left
+        for h_ul in range(1, H + 1 - (h - 1), 1):  # h upper left
+            for w_ul in range(1, W + 1 - (w - 1), 1):  # w upper left
                 h_lr = h_ul + h - 1  # h lower right
                 w_lr = w_ul + w - 1  # w lower right
                 land_price = cusum[h_lr][w_lr] - cusum[h_lr][w_ul - 1] - cusum[h_ul - 1][w_lr - 1] + cusum[h_ul - 1][w_ul - 1]
-
+                # print(f'h: {h}, w: {w}, h_ul: {h_ul}, w_ul: {w_ul}, land_price: {land_price + K * (h * w)}')
                 if land_price + K * (h * w) <= V:
                     ans = h * w
                     break
-            else:
-                continue
-            break
+            # else:
+            #     continue
+            # break
 
 print(ans)
-
